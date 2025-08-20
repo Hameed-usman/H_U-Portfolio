@@ -20,68 +20,71 @@ const Skills = () => {
     }
   }, [isInView, controls]);
 
-  const skillCategories = {
-    frontend: {
-      title: 'Frontend Development',
-      icon: Code2,
-      color: '#00f5ff',
-      skills: [
-        { name: 'React.js', level: 95, icon: '⚛️', description: 'Advanced component architecture & hooks' },
-        { name: 'Next.js', level: 90, icon: '▲', description: 'SSR, SSG, and full-stack applications' },
-        { name: 'TypeScript', level: 88, icon: '📘', description: 'Type-safe development' },
-        { name: 'JavaScript ES6+', level: 95, icon: '🟨', description: 'Modern JS features & async programming' },
-        { name: 'HTML5 & CSS3', level: 92, icon: '🎨', description: 'Semantic markup & advanced styling' },
-        { name: 'Tailwind CSS', level: 90, icon: '💨', description: 'Utility-first CSS framework' },
-        { name: 'Framer Motion', level: 85, icon: '🎭', description: 'Advanced animations & interactions' },
-        { name: 'Three.js', level: 75, icon: '🎲', description: '3D graphics and WebGL' }
-      ]
-    },
-    backend: {
-      title: 'Backend Development',
-      icon: Server,
-      color: '#ff0080',
-      skills: [
-        { name: 'Node.js', level: 92, icon: '🟢', description: 'Server-side JavaScript runtime' },
-        { name: 'Express.js', level: 90, icon: '🚂', description: 'RESTful APIs & middleware' },
-        { name: 'MongoDB', level: 88, icon: '🍃', description: 'NoSQL database & aggregation' },
-        { name: 'PostgreSQL', level: 82, icon: '🐘', description: 'Relational database & SQL' },
-        { name: 'GraphQL', level: 78, icon: '📊', description: 'API query language' },
-        { name: 'Redis', level: 75, icon: '🔴', description: 'Caching & session management' },
-        { name: 'JWT Authentication', level: 85, icon: '🔐', description: 'Secure token-based auth' },
-        { name: 'Socket.io', level: 80, icon: '⚡', description: 'Real-time communication' }
-      ]
-    },
-    tools: {
-      title: 'Tools & DevOps',
-      icon: Cloud,
-      color: '#9333ea',
-      skills: [
-        { name: 'Git & GitHub', level: 90, icon: '🐱', description: 'Version control & collaboration' },
-        { name: 'Docker', level: 80, icon: '🐳', description: 'Containerization & deployment' },
-        { name: 'AWS', level: 75, icon: '☁️', description: 'Cloud services & hosting' },
-        { name: 'Vercel', level: 88, icon: '▲', description: 'Frontend deployment & CDN' },
-        { name: 'Webpack', level: 78, icon: '📦', description: 'Module bundling & optimization' },
-        { name: 'Jest', level: 82, icon: '🃏', description: 'Unit & integration testing' },
-        { name: 'Postman', level: 85, icon: '📮', description: 'API testing & documentation' },
-        { name: 'VS Code', level: 95, icon: '💙', description: 'IDE customization & extensions' }
-      ]
-    },
-    design: {
-      title: 'Design & UI/UX',
-      icon: Palette,
-      color: '#10b981',
-      skills: [
-        { name: 'Figma', level: 85, icon: '🎨', description: 'UI/UX design & prototyping' },
-        { name: 'Adobe XD', level: 80, icon: '🔮', description: 'Design systems & wireframes' },
-        { name: 'Responsive Design', level: 92, icon: '📱', description: 'Mobile-first approach' },
-        { name: 'User Experience', level: 88, icon: '👤', description: 'User research & usability' },
-        { name: 'Design Systems', level: 85, icon: '🏗️', description: 'Component libraries & consistency' },
-        { name: 'Accessibility', level: 82, icon: '♿', description: 'WCAG compliance & inclusive design' },
-        { name: 'Color Theory', level: 87, icon: '🌈', description: 'Visual hierarchy & branding' },
-        { name: 'Typography', level: 84, icon: '📝', description: 'Font selection & readability' }
-      ]
-    }
-  };
+const skillCategories = {
+  frontend: {
+    title: 'Frontend Development',
+    icon: Code2,
+    color: '#00f5ff',
+    skills: [
+      { name: 'React.js', level: 95, icon: '⚛️', description: 'Advanced component architecture & hooks' },
+      { name: 'Next.js', level: 75, icon: '▲', description: 'SSR, SSG, and full-stack applications' },
+      { name: 'JavaScript ES6+', level: 95, icon: '🟨', description: 'Modern JS features & async programming' },
+      { name: 'HTML5 & CSS3', level: 92, icon: '🎨', description: 'Semantic markup & advanced styling' },
+      { name: 'Tailwind CSS', level: 90, icon: '💨', description: 'Utility-first CSS framework' },
+      { name: 'Framer Motion', level: 85, icon: '🎭', description: 'Smooth animations & interactions' },
+      { name: 'Three.js', level: 75, icon: '🎲', description: '3D graphics and WebGL' },
+      { name: 'ShadCn', level: 88, icon: '📐', description: 'Responsive UI components' },
+      { name: 'Aceternity UI', level: 88, icon: '🎨', description: 'Asthetic Design' } // New instead of TypeScript
+ // New instead of TypeScript
+    ]
+  },
+  backend: {
+    title: 'Backend Development',
+    icon: Server,
+    color: '#ff0080',
+    skills: [
+      { name: 'Node.js', level: 92, icon: '🟢', description: 'Server-side JavaScript runtime' },
+      { name: 'Express.js', level: 90, icon: '🚂', description: 'RESTful APIs & middleware' },
+      { name: 'MongoDB', level: 88, icon: '🍃', description: 'NoSQL database & aggregation' },
+      { name: 'PostgreSQL', level: 82, icon: '🐘', description: 'Relational database & SQL' },
+      { name: 'MySQL', level: 85, icon: '🗄️', description: 'Relational database management' },
+      { name: 'PHP', level: 75, icon: '🐘', description: 'Backend scripting & dynamic apps' },
+      { name: 'Laravel', level: 70, icon: '🎯', description: 'MVC framework for scalable apps' },
+      { name: 'JWT Authentication', level: 85, icon: '🔐', description: 'Secure token-based auth' }
+    ]
+  },
+  tools: {
+    title: 'Tools & Workflow',
+    icon: Cloud,
+    color: '#9333ea',
+    skills: [
+      { name: 'Git & GitHub', level: 90, icon: '🐱', description: 'Version control & collaboration' },
+      { name: 'Vercel', level: 88, icon: '▲', description: 'Frontend deployment & CDN' },
+      { name: 'Netlify', level: 85, icon: '🌐', description: 'Static hosting & CI/CD' },
+      { name: 'Postman', level: 85, icon: '📮', description: 'API testing & documentation' },
+      { name: 'cPanel', level: 80, icon: '⚙️', description: 'Web hosting & management' },
+      { name: 'VS Code', level: 95, icon: '💙', description: 'IDE customization & extensions' },
+      { name: 'NPM & Yarn', level: 88, icon: '📦', description: 'Package management & scripts' },
+      { name: 'Chrome DevTools', level: 90, icon: '🛠️', description: 'Debugging & performance optimization' }
+    ]
+  },
+  design: {
+    title: 'Design to Code',
+    icon: Palette,
+    color: '#10b981',
+    skills: [
+      { name: 'Figma to Code', level: 90, icon: '🎨', description: 'Pixel-perfect conversion into responsive layouts' },
+      { name: 'Adobe XD to Code', level: 85, icon: '🔮', description: 'Turning wireframes into functional UI' },
+      { name: 'Responsive Design', level: 92, icon: '📱', description: 'Mobile-first implementation' },
+      { name: 'Cross-Browser Compatibility', level: 87, icon: '🌍', description: 'Ensuring consistent UI across browsers' },
+      { name: 'Performance Optimization', level: 88, icon: '⚡', description: 'Fast-loading & optimized pages' },
+      { name: 'Component Reusability', level: 85, icon: '♻️', description: 'Clean, maintainable UI components' },
+      { name: 'CSS Animations', level: 82, icon: '✨', description: 'Enhancing interactivity & UX' },
+      { name: 'UI Prototyping Integration', level: 84, icon: '🧩', description: 'Seamless transition from design to code' }
+    ]
+  }
+};
+
 
   const achievements = [
     { 

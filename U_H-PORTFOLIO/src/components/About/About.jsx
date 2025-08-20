@@ -1,7 +1,7 @@
 // File: src/components/About/About.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
-import { Code, Lightbulb, Rocket, Users, Award, Coffee } from 'lucide-react';
+import { Code, Lightbulb, Rocket, Users, Award, Coffee, Infinity } from 'lucide-react';
 import './About.css';
 
 const About = () => {
@@ -40,10 +40,11 @@ const About = () => {
   };
 
   const stats = [
-    { number: '50+', label: 'Projects Completed', icon: Code },
-    { number: '3+', label: 'Years Experience', icon: Award },
-    { number: '20+', label: 'Happy Clients', icon: Users },
-    { number: '1000+', label: 'Cups of Coffee', icon: Coffee }
+    { number: '10+', label: 'Web Projects Built', icon: Code },
+  { number: '1+', label: 'Years in Development', icon: Award },
+  { number: '5+', label: 'Technologies Mastered', icon: Users },
+  { number: '∞', label: 'Ideas in Progress', icon: Infinity },
+    { number: '100+', label: 'Cups of Coffee', icon: Coffee }
   ];
 
   const values = [
@@ -93,47 +94,49 @@ const About = () => {
           {/* Main Content Grid */}
           <div className="about-grid">
             {/* Left Column - Story */}
-            <motion.div className="about-story" variants={itemVariants}>
-              <div className="story-card glass">
-                <div className="story-header">
-                  <div className="story-avatar">
-                    <div className="avatar-placeholder">
-                      <Code size={40} className="avatar-icon" />
-                    </div>
-                    <div className="avatar-status">
-                      <div className="status-dot"></div>
-                      <span>Available for work</span>
-                    </div>
-                  </div>
-                </div>
+           <motion.div className="about-story" variants={itemVariants}>
+  <div className="story-card glass">
+    <div className="story-header">
+      <div className="story-avatar">
+        <div className="avatar-placeholder">
+          <Code size={40} className="avatar-icon" />
+        </div>
+        <div className="avatar-status">
+          <div className="status-dot"></div>
+          <span>Available for work</span>
+        </div>
+      </div>
+    </div>
 
-                <div className="story-content">
-                  <h3>My Journey</h3>
-                  <p>
-                    I'm a passionate full-stack developer with over 3 years of experience 
-                    creating exceptional digital experiences. My journey began with curiosity 
-                    about how websites work, and it evolved into a love for building 
-                    sophisticated web applications.
-                  </p>
-                  <p>
-                    I specialize in the MERN stack and have a keen eye for UI/UX design. 
-                    I believe in writing clean, maintainable code and creating user-centric 
-                    solutions that make a real impact.
-                  </p>
+    <div className="story-content">
+      <h3>My Journey</h3>
+<p>
+  I’m a passionate web developer with a strong foundation in creating dynamic, 
+  user-focused applications. My journey began with a curiosity for how the web works 
+  and has grown into a dedication to crafting clean, efficient, and visually 
+  engaging digital experiences.
+</p>
+<p>
+  Skilled in HTML, CSS, JavaScript, and the MERN stack, I also work with Laravel, PHP, 
+  and MySQL to develop robust backend solutions. I enjoy blending technical precision 
+  with creative design, focusing on delivering applications that are both functional 
+  and intuitive, ensuring every project leaves a lasting impression.
+</p>
 
-                  <div className="story-highlights">
-                    <div className="highlight">
-                      <span className="highlight-number">3+</span>
-                      <span className="highlight-text">Years of Experience</span>
-                    </div>
-                    <div className="highlight">
-                      <span className="highlight-number">50+</span>
-                      <span className="highlight-text">Projects Delivered</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+      <div className="story-highlights">
+        <div className="highlight">
+          <span className="highlight-number">1+</span>
+          <span className="highlight-text">Years of Development</span>
+        </div>
+        <div className="highlight">
+          <span className="highlight-number">10+</span>
+          <span className="highlight-text">Projects Completed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</motion.div>
+
 
             {/* Right Column - Values */}
             <motion.div className="about-values" variants={itemVariants}>
@@ -200,15 +203,22 @@ const About = () => {
                 I'm always excited to work on new projects and collaborate with 
                 amazing people. Let's turn your ideas into reality!
               </p>
-              <motion.button
-                className="cta-button"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-              >
-                Get In Touch
-                <div className="button-arrow">→</div>
-              </motion.button>
+             <motion.button
+  className="cta-button"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      window.open('https://www.linkedin.com/in/hameed-usmanmern011/', '_blank');
+    }, 600); // delay for scroll animation
+  }}
+>
+  Get In Touch
+  <div className="button-arrow">→</div>
+</motion.button>
+
+
             </div>
           </motion.div>
         </motion.div>

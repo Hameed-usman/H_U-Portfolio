@@ -11,7 +11,7 @@ const Hero = () => {
   const controls = useAnimation();
   const heroRef = useRef(null);
 
-  const words = ['Full Stack Developer', 'React Specialist', 'MERN Expert', 'UI/UX Enthusiast', 'Problem Solver'];
+  const words = ['Full Stack Developer', 'React Specialist', 'MERN Expert', 'UI To Code', 'Problem Solver'];
 
   // Typing animation effect
   useEffect(() => {
@@ -65,8 +65,8 @@ const Hero = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', color: '#333' },
-    { icon: Linkedin, href: 'https://linkedin.com', color: '#0077b5' },
+    { icon: Github, href: 'https://github.com/Hameed-usman', color: '#333' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/hameed-usmanmern011/', color: '#0077b5' },
     { icon: Twitter, href: 'https://twitter.com', color: '#1da1f2' },
   ];
 
@@ -121,7 +121,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            <span className="name-text gradient-text">Your Name</span>
+            <span className="name-text gradient-text">Usman Hameed</span>
           </motion.h1>
 
           <motion.div
@@ -147,31 +147,41 @@ const Hero = () => {
           </motion.p>
 
           {/* Call to Action Buttons */}
-          <motion.div
-            className="hero-buttons"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.6 }}
-          >
-            <motion.button
-              className="cta-button primary"
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0, 245, 255, 0.4)" }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
-            >
-              View My Work
-              <div className="button-glow"></div>
-            </motion.button>
+      
+          {/* GPT  */}
 
-            <motion.button
-              className="cta-button secondary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Download size={18} />
-              Download CV
-            </motion.button>
-          </motion.div>
+       <motion.div
+  className="hero-buttons"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 1.6 }}
+>
+  <motion.button
+    className="cta-button primary"
+    whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0, 245, 255, 0.4)" }}
+    whileTap={{ scale: 0.95 }}
+    onClick={() => window.open('https://github.com/Hameed-usman', '_blank')}
+  >
+    View My Work
+    <div className="button-glow"></div>
+  </motion.button>
+
+  <motion.button
+    className="cta-button secondary"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    onClick={() => window.open('https://drive.google.com/file/d/1Pp5LSp8C5HkYmx1MLV-qbrG2mIkkt3Jt/view?usp=drive_link', '_blank')}
+  >
+    <Download size={18} />
+    Download CV
+  </motion.button>
+</motion.div>
+
+
+
+ 
+       {/* GPT CLOSE/  */}
+          {/* Call to action End  */}
 
           {/* Social Links */}
           <motion.div

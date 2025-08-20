@@ -5,8 +5,8 @@ import Navigation from './components/Navigation/Navigation';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Skills from './components/Skills/Skills';
-// import Projects from './components/Projects/';
-// import Contact from './components/Contact/';
+import Projects from './components/Projects/Project';
+import Contact from './components/Contact/Contact';
 import Loader from './components/Loader/Loader';
 import ParticleBackground from './components/3D/ParticleBackground';
 import './App.css';
@@ -57,8 +57,8 @@ function App() {
               <Hero />
               <About />
               <Skills />
-              {/* <Projects /> */}
-              {/* <Contact /> */}
+              <Projects />
+              <Contact />
             </main>
             
             {/* Custom Cursor */}
